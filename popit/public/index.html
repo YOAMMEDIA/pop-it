@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popit Game | Widget</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script>
+			window.settings = Object.fromEntries(new URLSearchParams(location.search));
+			let uniqueId = window.settings.tiktok;
+		</script>
+
+		<script src="connection.js"></script>
+        <script src="./scripts/confetti.js" defer></script>
+        <script src="./scripts/widget-script.js?v=1.0" defer></script>
+    </head>
+    <body>
+        <div class="widget">
+            <img class="background">
+            <div class="header">
+                <h1>LET'S MAKE <span id="shapeName"></span></h1>
+            </div>
+            <img class="popit">
+            <img class="hand" src="./images/hand.png">
+            <img class="circle" src="./images/circle1.png">
+            <img class="circle" src="./images/circle2.png">
+            <img class="circle" src="./images/circle3.png">
+            <span class="confetti confetti1"></span>
+            <span class="confetti confetti2"></span>
+            <span class="confetti confetti3"></span>
+            <span class="confetti confetti4"></span>
+            <span class="confetti confetti5"></span>
+            <canvas width="1080" height="1920"></canvas>
+        </div>
+    </body>
+</html>
